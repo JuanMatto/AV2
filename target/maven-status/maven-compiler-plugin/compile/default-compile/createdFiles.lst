@@ -1,0 +1,11 @@
+com\example\academico\controller\CursoController.class
+com\example\academico\entity\Curso.class
+com\example\academico\config\OpenApiConfig.class
+com\example\academico\entity\Aluno.class
+com\example\academico\AcademicoApplication.class
+com\example\academico\repository\CursoRepository.class
+com\example\academico\controller\AlunoController.class
+com\example\academico\service\AlunoService.class
+com\example\academico\config\SecurityConfig.class
+com\example\academico\repository\AlunoRepository.class
+com\example\academico\service\CursoService.class

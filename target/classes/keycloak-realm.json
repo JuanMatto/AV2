@@ -1,0 +1,24 @@
+{
+  "realm": "academico",
+  "enabled": true,
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "credentials": [{"type":"password","value":"admin","temporary":false}],
+      "realmRoles": ["offline_access","uma_authorization","user","admin"]
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "academico-backend-client",
+      "redirectUris": ["*"],
+      "publicClient": false,
+      "secret": "academico-secret",
+      "protocol": "openid-connect",
+      "serviceAccountsEnabled": false,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    }
+  ]
+}
