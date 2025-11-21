@@ -125,10 +125,123 @@ http://localhost:8080/v3/api-docs
 /actuator/health
 /actuator/prometheus
 
-![img_6.png](img_6.png)
-
 ✔️ Configurações no application.properties:
 ---
 
 management.endpoints.web.exposure.include=health,info,prometheus
 management.endpoint.prometheus.enabled=true
+
+✔️ Prometheus:
+---
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+
+✔️ Grafana:
+---
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
+
+---
+
+# 📦 Docker – Prometheus e Grafana
+
+Este backend possui monitoramento via Docker usando Prometheus e Grafana.
+
+docker-compose.yml
+
+- Rodar os serviços:
+
+docker compose up -d
+
+Prometheus → http://localhost:9090
+
+Grafana → http://localhost:3000
+
+![img_11.png](img_11.png)
+
+---
+
+# 🚀 Testes com Gatling
+Instalação:
+
+https://gatling.io/docs/gatling/reference/current/
+
+- Estrutura:    /backend/src/test/gatling
+
+- Execução: mvn gatling:test
+
+- Relatórios: /target/gatling/<nome-do-teste>/
+
+---
+
+# 🚀 Testes com JMeter
+Baixar JMeter:
+
+https://jmeter.apache.org/
+
+Rodar plano:
+jmeter -n -t teste.jmx -l resultados.csv -e -o report
+
+---
+
+# ☁️ Deploy — Render
+Documentação oficial:
+
+https://render.com/docs/deploy-spring
+
+Passos:
+
+Subir o projeto no GitHub
+
+Render → New Web Service
+
+Conectar ao repositório
+
+Build command:
+
+mvn package -DskipTests
+
+
+Start command:
+
+java -jar target/<arquivo>.jar
+
+
+Usar:
+
+Java 17
+
+Porta automática $PORT
+
+---
+
+# 📚 Referências
+
+Spring Boot: https://docs.spring.io/spring-boot/docs/current/reference/html
+
+Spring Data JPA: https://docs.spring.io/spring-data/jpa/docs/current/reference/html
+
+Spring Security: https://docs.spring.io/spring-security/reference
+
+Swagger (Springdoc): https://springdoc.org
+
+Prometheus: https://prometheus.io
+
+Grafana: https://grafana.com
+
+Gatling: https://gatling.io
+
+JMeter: https://jmeter.apache.org
+
+---
+
+# ✨ Autor & Contato
+
+Desenvolvido por **Juan Carlos Pereira Matto**.
+
+🌐 GitHub: https://github.com/JuanMatto/AV2
+
+📦 Repositório do Projeto: https://github.com/JuanMatto/AV2  
+
+---
